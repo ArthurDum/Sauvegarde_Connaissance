@@ -11,64 +11,49 @@
 
 #Region " Gestion en fonction de quel boutton est cliquer"
 
-    Private Sub ButtonHome_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonHome.Click
-        ButtonHome.BackColor = Color.Yellow
-        ButtonDonnes.BackColor = Color.LightGray
-        ButtonNew.BackColor = Color.LightGray
-        ButtonGestion.BackColor = Color.LightGray
-        ButtonReglages.BackColor = Color.LightGray
-        ListViewDonnee.Visible = False
-        LabelDonneRecherche.Visible = False
-        LabelHomeConnaissance.Visible = True
-        PanelNouveau.Visible = False
+
+    Private Sub Button1Home_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1Home.Click
+        Button1Home.BackColor = Color.Yellow
+        Button1Donne.BackColor = Color.LightGray
+        Button1Nouveau.BackColor = Color.LightGray
+        Button1Reglage.BackColor = Color.LightGray
+        PanelHome.Visible = True
+        PanelDonne.Visible = False
+        PanelNew.Visible = False
+        PanelReglages.Visible = False
     End Sub
 
-    Private Sub ButtonDonnes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonDonnes.Click
-        ButtonHome.BackColor = Color.LightGray
-        ButtonDonnes.BackColor = Color.Yellow
-        ButtonNew.BackColor = Color.LightGray
-        ButtonGestion.BackColor = Color.LightGray
-        ButtonReglages.BackColor = Color.LightGray
-        ListViewDonnee.Visible = True
-        LabelDonneRecherche.Visible = True
-        LabelHomeConnaissance.Visible = False
-        PanelNouveau.Visible = False
+    Private Sub Button1Donne_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1Donne.Click
+        Button1Home.BackColor = Color.LightGray
+        Button1Donne.BackColor = Color.Yellow
+        Button1Nouveau.BackColor = Color.LightGray
+        Button1Reglage.BackColor = Color.LightGray
+        PanelHome.Visible = False
+        PanelDonne.Visible = True
+        PanelNew.Visible = False
+        PanelReglages.Visible = False
     End Sub
 
-    Private Sub ButtonNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonNew.Click
-        ButtonHome.BackColor = Color.LightGray
-        ButtonDonnes.BackColor = Color.LightGray
-        ButtonNew.BackColor = Color.Yellow
-        ButtonGestion.BackColor = Color.LightGray
-        ButtonReglages.BackColor = Color.LightGray
-        LabelHomeConnaissance.Visible = False
-        ListViewDonnee.Visible = False
-        LabelDonneRecherche.Visible = False
-        PanelNouveau.Visible = True
+    Private Sub Button1Nouveau_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1Nouveau.Click
+        Button1Home.BackColor = Color.LightGray
+        Button1Donne.BackColor = Color.LightGray
+        Button1Nouveau.BackColor = Color.Yellow
+        Button1Reglage.BackColor = Color.LightGray
+        PanelHome.Visible = False
+        PanelDonne.Visible = False
+        PanelNew.Visible = True
+        PanelReglages.Visible = False
     End Sub
 
-    Private Sub ButtonGestion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonGestion.Click
-        ButtonHome.BackColor = Color.LightGray
-        ButtonDonnes.BackColor = Color.LightGray
-        ButtonNew.BackColor = Color.LightGray
-        ButtonGestion.BackColor = Color.Yellow
-        ButtonReglages.BackColor = Color.LightGray
-        LabelHomeConnaissance.Visible = False
-        ListViewDonnee.Visible = False
-        LabelDonneRecherche.Visible = False
-        PanelNouveau.Visible = False
-    End Sub
-
-    Private Sub ButtonReglages_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonReglages.Click
-        ButtonHome.BackColor = Color.LightGray
-        ButtonDonnes.BackColor = Color.LightGray
-        ButtonNew.BackColor = Color.LightGray
-        ButtonGestion.BackColor = Color.LightGray
-        ButtonReglages.BackColor = Color.Yellow
-        LabelHomeConnaissance.Visible = False
-        ListViewDonnee.Visible = False
-        LabelDonneRecherche.Visible = False
-        PanelNouveau.Visible = False
+    Private Sub Button1Reglage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1Reglage.Click
+        Button1Home.BackColor = Color.LightGray
+        Button1Donne.BackColor = Color.LightGray
+        Button1Nouveau.BackColor = Color.LightGray
+        Button1Reglage.BackColor = Color.Yellow
+        PanelHome.Visible = False
+        PanelDonne.Visible = False
+        PanelNew.Visible = False
+        PanelReglages.Visible = True
     End Sub
 
 #End Region
@@ -103,4 +88,6 @@
         Creer_new_Item()
         Enregistrer()
     End Sub
+
+
 End Class
