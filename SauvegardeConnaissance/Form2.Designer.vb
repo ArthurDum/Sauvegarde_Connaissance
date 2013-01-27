@@ -23,87 +23,87 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Titre_ConnaissancesLabel As System.Windows.Forms.Label
-        Dim Contenu_ConnaissancesLabel As System.Windows.Forms.Label
-        Dim Date_ConnaissancesLabel As System.Windows.Forms.Label
-        Dim Km_IDLabel As System.Windows.Forms.Label
+        Dim Km_IdLabel As System.Windows.Forms.Label
+        Dim TitreLabel As System.Windows.Forms.Label
+        Dim ContenuLabel As System.Windows.Forms.Label
+        Dim DateLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
-        Me.FirstDatabaseDataSet = New SauvegardeConnaissance.FirstDatabaseDataSet()
-        Me.ConnaissancesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ConnaissancesTableAdapter = New SauvegardeConnaissance.FirstDatabaseDataSetTableAdapters.ConnaissancesTableAdapter()
-        Me.TableAdapterManager = New SauvegardeConnaissance.FirstDatabaseDataSetTableAdapters.TableAdapterManager()
-        Me.ConnaissancesBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ConnaissancesBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.Titre_ConnaissancesTextBox = New System.Windows.Forms.TextBox()
-        Me.Contenu_ConnaissancesTextBox = New System.Windows.Forms.TextBox()
-        Me.Date_ConnaissancesDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.Km_IDTextBox = New System.Windows.Forms.TextBox()
-        Titre_ConnaissancesLabel = New System.Windows.Forms.Label()
-        Contenu_ConnaissancesLabel = New System.Windows.Forms.Label()
-        Date_ConnaissancesLabel = New System.Windows.Forms.Label()
-        Km_IDLabel = New System.Windows.Forms.Label()
-        CType(Me.FirstDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ConnaissancesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ConnaissancesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ConnaissancesBindingNavigator.SuspendLayout()
+        Me.DataBaseDataSet = New SauvegardeConnaissance.DataBaseDataSet()
+        Me.ConnaissancesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ConnaissancesTableAdapter = New SauvegardeConnaissance.DataBaseDataSetTableAdapters.ConnaissancesTableAdapter()
+        Me.TableAdapterManager = New SauvegardeConnaissance.DataBaseDataSetTableAdapters.TableAdapterManager()
+        Me.ConnaissancesBindingSource1BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ConnaissancesBindingSource1BindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.Km_IdTextBox = New System.Windows.Forms.TextBox()
+        Me.TitreTextBox = New System.Windows.Forms.TextBox()
+        Me.ContenuTextBox = New System.Windows.Forms.TextBox()
+        Me.DateDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Km_IdLabel = New System.Windows.Forms.Label()
+        TitreLabel = New System.Windows.Forms.Label()
+        ContenuLabel = New System.Windows.Forms.Label()
+        DateLabel = New System.Windows.Forms.Label()
+        CType(Me.DataBaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ConnaissancesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ConnaissancesBindingSource1BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ConnaissancesBindingSource1BindingNavigator.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Titre_ConnaissancesLabel
+        'Km_IdLabel
         '
-        Titre_ConnaissancesLabel.AutoSize = True
-        Titre_ConnaissancesLabel.Location = New System.Drawing.Point(12, 40)
-        Titre_ConnaissancesLabel.Name = "Titre_ConnaissancesLabel"
-        Titre_ConnaissancesLabel.Size = New System.Drawing.Size(106, 13)
-        Titre_ConnaissancesLabel.TabIndex = 1
-        Titre_ConnaissancesLabel.Text = "Titre Connaissances:"
+        Km_IdLabel.AutoSize = True
+        Km_IdLabel.Location = New System.Drawing.Point(12, 45)
+        Km_IdLabel.Name = "Km_IdLabel"
+        Km_IdLabel.Size = New System.Drawing.Size(37, 13)
+        Km_IdLabel.TabIndex = 1
+        Km_IdLabel.Text = "Km Id:"
         '
-        'Contenu_ConnaissancesLabel
+        'TitreLabel
         '
-        Contenu_ConnaissancesLabel.AutoSize = True
-        Contenu_ConnaissancesLabel.Location = New System.Drawing.Point(12, 66)
-        Contenu_ConnaissancesLabel.Name = "Contenu_ConnaissancesLabel"
-        Contenu_ConnaissancesLabel.Size = New System.Drawing.Size(125, 13)
-        Contenu_ConnaissancesLabel.TabIndex = 3
-        Contenu_ConnaissancesLabel.Text = "Contenu Connaissances:"
+        TitreLabel.AutoSize = True
+        TitreLabel.Location = New System.Drawing.Point(12, 71)
+        TitreLabel.Name = "TitreLabel"
+        TitreLabel.Size = New System.Drawing.Size(31, 13)
+        TitreLabel.TabIndex = 3
+        TitreLabel.Text = "Titre:"
         '
-        'Date_ConnaissancesLabel
+        'ContenuLabel
         '
-        Date_ConnaissancesLabel.AutoSize = True
-        Date_ConnaissancesLabel.Location = New System.Drawing.Point(12, 93)
-        Date_ConnaissancesLabel.Name = "Date_ConnaissancesLabel"
-        Date_ConnaissancesLabel.Size = New System.Drawing.Size(108, 13)
-        Date_ConnaissancesLabel.TabIndex = 5
-        Date_ConnaissancesLabel.Text = "Date Connaissances:"
+        ContenuLabel.AutoSize = True
+        ContenuLabel.Location = New System.Drawing.Point(12, 97)
+        ContenuLabel.Name = "ContenuLabel"
+        ContenuLabel.Size = New System.Drawing.Size(50, 13)
+        ContenuLabel.TabIndex = 5
+        ContenuLabel.Text = "Contenu:"
         '
-        'Km_IDLabel
+        'DateLabel
         '
-        Km_IDLabel.AutoSize = True
-        Km_IDLabel.Location = New System.Drawing.Point(12, 118)
-        Km_IDLabel.Name = "Km_IDLabel"
-        Km_IDLabel.Size = New System.Drawing.Size(39, 13)
-        Km_IDLabel.TabIndex = 7
-        Km_IDLabel.Text = "Km ID:"
+        DateLabel.AutoSize = True
+        DateLabel.Location = New System.Drawing.Point(12, 124)
+        DateLabel.Name = "DateLabel"
+        DateLabel.Size = New System.Drawing.Size(33, 13)
+        DateLabel.TabIndex = 7
+        DateLabel.Text = "Date:"
         '
-        'FirstDatabaseDataSet
+        'DataBaseDataSet
         '
-        Me.FirstDatabaseDataSet.DataSetName = "FirstDatabaseDataSet"
-        Me.FirstDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.DataBaseDataSet.DataSetName = "DataBaseDataSet"
+        Me.DataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ConnaissancesBindingSource
+        'ConnaissancesBindingSource1
         '
-        Me.ConnaissancesBindingSource.DataMember = "Connaissances"
-        Me.ConnaissancesBindingSource.DataSource = Me.FirstDatabaseDataSet
+        Me.ConnaissancesBindingSource1.DataMember = "Connaissances"
+        Me.ConnaissancesBindingSource1.DataSource = Me.DataBaseDataSet
         '
         'ConnaissancesTableAdapter
         '
@@ -113,180 +113,176 @@ Partial Class Form2
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.ConnaissancesTableAdapter = Me.ConnaissancesTableAdapter
-        Me.TableAdapterManager.UpdateOrder = SauvegardeConnaissance.FirstDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = SauvegardeConnaissance.DataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'ConnaissancesBindingNavigator
+        'ConnaissancesBindingSource1BindingNavigator
         '
-        Me.ConnaissancesBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.ConnaissancesBindingNavigator.BindingSource = Me.ConnaissancesBindingSource
-        Me.ConnaissancesBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.ConnaissancesBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.ConnaissancesBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ConnaissancesBindingNavigatorSaveItem})
-        Me.ConnaissancesBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.ConnaissancesBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.ConnaissancesBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.ConnaissancesBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.ConnaissancesBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.ConnaissancesBindingNavigator.Name = "ConnaissancesBindingNavigator"
-        Me.ConnaissancesBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ConnaissancesBindingNavigator.Size = New System.Drawing.Size(629, 25)
-        Me.ConnaissancesBindingNavigator.TabIndex = 0
-        Me.ConnaissancesBindingNavigator.Text = "BindingNavigator1"
+        Me.ConnaissancesBindingSource1BindingNavigator.AddNewItem = Me.ToolStripButton5
+        Me.ConnaissancesBindingSource1BindingNavigator.BindingSource = Me.ConnaissancesBindingSource1
+        Me.ConnaissancesBindingSource1BindingNavigator.CountItem = Me.ToolStripLabel1
+        Me.ConnaissancesBindingSource1BindingNavigator.DeleteItem = Me.ToolStripButton6
+        Me.ConnaissancesBindingSource1BindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator3, Me.ToolStripButton5, Me.ToolStripButton6, Me.ConnaissancesBindingSource1BindingNavigatorSaveItem})
+        Me.ConnaissancesBindingSource1BindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.ConnaissancesBindingSource1BindingNavigator.MoveFirstItem = Me.ToolStripButton1
+        Me.ConnaissancesBindingSource1BindingNavigator.MoveLastItem = Me.ToolStripButton4
+        Me.ConnaissancesBindingSource1BindingNavigator.MoveNextItem = Me.ToolStripButton3
+        Me.ConnaissancesBindingSource1BindingNavigator.MovePreviousItem = Me.ToolStripButton2
+        Me.ConnaissancesBindingSource1BindingNavigator.Name = "ConnaissancesBindingSource1BindingNavigator"
+        Me.ConnaissancesBindingSource1BindingNavigator.PositionItem = Me.ToolStripTextBox1
+        Me.ConnaissancesBindingSource1BindingNavigator.Size = New System.Drawing.Size(529, 25)
+        Me.ConnaissancesBindingSource1BindingNavigator.TabIndex = 0
+        Me.ConnaissancesBindingSource1BindingNavigator.Text = "BindingNavigator1"
         '
-        'BindingNavigatorAddNewItem
+        'ToolStripButton5
         '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Ajouter nouveau"
+        Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
+        Me.ToolStripButton5.Name = "ToolStripButton5"
+        Me.ToolStripButton5.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton5.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton5.Text = "Ajouter nouveau"
         '
-        'BindingNavigatorCountItem
+        'ToolStripLabel1
         '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Nombre total d'éléments"
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(37, 22)
+        Me.ToolStripLabel1.Text = "de {0}"
+        Me.ToolStripLabel1.ToolTipText = "Nombre total d'éléments"
         '
-        'BindingNavigatorDeleteItem
+        'ToolStripButton6
         '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Supprimer"
+        Me.ToolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton6.Image = CType(resources.GetObject("ToolStripButton6.Image"), System.Drawing.Image)
+        Me.ToolStripButton6.Name = "ToolStripButton6"
+        Me.ToolStripButton6.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton6.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton6.Text = "Supprimer"
         '
-        'BindingNavigatorMoveFirstItem
+        'ToolStripButton1
         '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Placer en premier"
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "Placer en premier"
         '
-        'BindingNavigatorMovePreviousItem
+        'ToolStripButton2
         '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Déplacer vers le haut"
+        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton2.Text = "Déplacer vers le haut"
         '
-        'BindingNavigatorSeparator
+        'ToolStripSeparator1
         '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
-        'BindingNavigatorPositionItem
+        'ToolStripTextBox1
         '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Position actuelle"
+        Me.ToolStripTextBox1.AccessibleName = "Position"
+        Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
+        Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
+        Me.ToolStripTextBox1.Text = "0"
+        Me.ToolStripTextBox1.ToolTipText = "Position actuelle"
         '
-        'BindingNavigatorSeparator1
+        'ToolStripSeparator2
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'BindingNavigatorMoveNextItem
+        'ToolStripButton3
         '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Déplacer vers le bas"
+        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton3.Text = "Déplacer vers le bas"
         '
-        'BindingNavigatorMoveLastItem
+        'ToolStripButton4
         '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Placer en dernier"
+        Me.ToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
+        Me.ToolStripButton4.Name = "ToolStripButton4"
+        Me.ToolStripButton4.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton4.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton4.Text = "Placer en dernier"
         '
-        'BindingNavigatorSeparator2
+        'ToolStripSeparator3
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
         '
-        'ConnaissancesBindingNavigatorSaveItem
+        'ConnaissancesBindingSource1BindingNavigatorSaveItem
         '
-        Me.ConnaissancesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ConnaissancesBindingNavigatorSaveItem.Image = CType(resources.GetObject("ConnaissancesBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.ConnaissancesBindingNavigatorSaveItem.Name = "ConnaissancesBindingNavigatorSaveItem"
-        Me.ConnaissancesBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.ConnaissancesBindingNavigatorSaveItem.Text = "Enregistrer les données"
+        Me.ConnaissancesBindingSource1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ConnaissancesBindingSource1BindingNavigatorSaveItem.Image = CType(resources.GetObject("ConnaissancesBindingSource1BindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.ConnaissancesBindingSource1BindingNavigatorSaveItem.Name = "ConnaissancesBindingSource1BindingNavigatorSaveItem"
+        Me.ConnaissancesBindingSource1BindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.ConnaissancesBindingSource1BindingNavigatorSaveItem.Text = "Enregistrer les données"
         '
-        'Titre_ConnaissancesTextBox
+        'Km_IdTextBox
         '
-        Me.Titre_ConnaissancesTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConnaissancesBindingSource, "Titre Connaissances", True))
-        Me.Titre_ConnaissancesTextBox.Location = New System.Drawing.Point(143, 37)
-        Me.Titre_ConnaissancesTextBox.Name = "Titre_ConnaissancesTextBox"
-        Me.Titre_ConnaissancesTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Titre_ConnaissancesTextBox.TabIndex = 2
+        Me.Km_IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConnaissancesBindingSource1, "Km Id", True))
+        Me.Km_IdTextBox.Location = New System.Drawing.Point(68, 42)
+        Me.Km_IdTextBox.Name = "Km_IdTextBox"
+        Me.Km_IdTextBox.ReadOnly = True
+        Me.Km_IdTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Km_IdTextBox.TabIndex = 2
         '
-        'Contenu_ConnaissancesTextBox
+        'TitreTextBox
         '
-        Me.Contenu_ConnaissancesTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConnaissancesBindingSource, "Contenu Connaissances", True))
-        Me.Contenu_ConnaissancesTextBox.Location = New System.Drawing.Point(143, 63)
-        Me.Contenu_ConnaissancesTextBox.Name = "Contenu_ConnaissancesTextBox"
-        Me.Contenu_ConnaissancesTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Contenu_ConnaissancesTextBox.TabIndex = 4
+        Me.TitreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConnaissancesBindingSource1, "Titre", True))
+        Me.TitreTextBox.Location = New System.Drawing.Point(68, 68)
+        Me.TitreTextBox.Name = "TitreTextBox"
+        Me.TitreTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.TitreTextBox.TabIndex = 4
         '
-        'Date_ConnaissancesDateTimePicker
+        'ContenuTextBox
         '
-        Me.Date_ConnaissancesDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ConnaissancesBindingSource, "Date Connaissances", True))
-        Me.Date_ConnaissancesDateTimePicker.Location = New System.Drawing.Point(143, 89)
-        Me.Date_ConnaissancesDateTimePicker.Name = "Date_ConnaissancesDateTimePicker"
-        Me.Date_ConnaissancesDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Date_ConnaissancesDateTimePicker.TabIndex = 6
+        Me.ContenuTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConnaissancesBindingSource1, "Contenu", True))
+        Me.ContenuTextBox.Location = New System.Drawing.Point(68, 94)
+        Me.ContenuTextBox.Name = "ContenuTextBox"
+        Me.ContenuTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.ContenuTextBox.TabIndex = 6
         '
-        'Km_IDTextBox
+        'DateDateTimePicker
         '
-        Me.Km_IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConnaissancesBindingSource, "Km ID", True))
-        Me.Km_IDTextBox.Location = New System.Drawing.Point(143, 115)
-        Me.Km_IDTextBox.Name = "Km_IDTextBox"
-        Me.Km_IDTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Km_IDTextBox.TabIndex = 8
+        Me.DateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ConnaissancesBindingSource1, "Date", True))
+        Me.DateDateTimePicker.Location = New System.Drawing.Point(68, 120)
+        Me.DateDateTimePicker.Name = "DateDateTimePicker"
+        Me.DateDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.DateDateTimePicker.TabIndex = 8
         '
         'Form2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(629, 415)
-        Me.Controls.Add(Titre_ConnaissancesLabel)
-        Me.Controls.Add(Me.Titre_ConnaissancesTextBox)
-        Me.Controls.Add(Contenu_ConnaissancesLabel)
-        Me.Controls.Add(Me.Contenu_ConnaissancesTextBox)
-        Me.Controls.Add(Date_ConnaissancesLabel)
-        Me.Controls.Add(Me.Date_ConnaissancesDateTimePicker)
-        Me.Controls.Add(Km_IDLabel)
-        Me.Controls.Add(Me.Km_IDTextBox)
-        Me.Controls.Add(Me.ConnaissancesBindingNavigator)
+        Me.ClientSize = New System.Drawing.Size(529, 530)
+        Me.Controls.Add(Km_IdLabel)
+        Me.Controls.Add(Me.Km_IdTextBox)
+        Me.Controls.Add(TitreLabel)
+        Me.Controls.Add(Me.TitreTextBox)
+        Me.Controls.Add(ContenuLabel)
+        Me.Controls.Add(Me.ContenuTextBox)
+        Me.Controls.Add(DateLabel)
+        Me.Controls.Add(Me.DateDateTimePicker)
+        Me.Controls.Add(Me.ConnaissancesBindingSource1BindingNavigator)
         Me.Name = "Form2"
         Me.Text = "Form2"
-        CType(Me.FirstDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ConnaissancesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ConnaissancesBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ConnaissancesBindingNavigator.ResumeLayout(False)
-        Me.ConnaissancesBindingNavigator.PerformLayout()
+        CType(Me.DataBaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ConnaissancesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ConnaissancesBindingSource1BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ConnaissancesBindingSource1BindingNavigator.ResumeLayout(False)
+        Me.ConnaissancesBindingSource1BindingNavigator.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents FirstDatabaseDataSet As SauvegardeConnaissance.FirstDatabaseDataSet
     Friend WithEvents ConnaissancesBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents ConnaissancesTableAdapter As SauvegardeConnaissance.FirstDatabaseDataSetTableAdapters.ConnaissancesTableAdapter
-    Friend WithEvents TableAdapterManager As SauvegardeConnaissance.FirstDatabaseDataSetTableAdapters.TableAdapterManager
     Friend WithEvents ConnaissancesBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -300,8 +296,30 @@ Partial Class Form2
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ConnaissancesBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents Titre_ConnaissancesTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Contenu_ConnaissancesTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Date_ConnaissancesDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Km_IDTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents ConnaissancesDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataBaseDataSet As SauvegardeConnaissance.DataBaseDataSet
+    Friend WithEvents ConnaissancesBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents ConnaissancesTableAdapter As SauvegardeConnaissance.DataBaseDataSetTableAdapters.ConnaissancesTableAdapter
+    Friend WithEvents TableAdapterManager As SauvegardeConnaissance.DataBaseDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents ConnaissancesBindingSource1BindingNavigator As System.Windows.Forms.BindingNavigator
+    Friend WithEvents ToolStripButton5 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripButton6 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripTextBox1 As System.Windows.Forms.ToolStripTextBox
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton4 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ConnaissancesBindingSource1BindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Km_IdTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents TitreTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents ContenuTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents DateDateTimePicker As System.Windows.Forms.DateTimePicker
 End Class

@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("FirstDatabaseDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("DataBaseDataSet"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class FirstDatabaseDataSet
+Partial Public Class DataBaseDataSet
     Inherits Global.System.Data.DataSet
     
     Private tableConnaissances As ConnaissancesDataTable
@@ -128,7 +128,7 @@ Partial Public Class FirstDatabaseDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As FirstDatabaseDataSet = CType(MyBase.Clone,FirstDatabaseDataSet)
+        Dim cln As DataBaseDataSet = CType(MyBase.Clone,DataBaseDataSet)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -199,9 +199,9 @@ Partial Public Class FirstDatabaseDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "FirstDatabaseDataSet"
+        Me.DataSetName = "DataBaseDataSet"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/FirstDatabaseDataSet.xsd"
+        Me.Namespace = "http://tempuri.org/DataBaseDataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableConnaissances = New ConnaissancesDataTable()
@@ -225,7 +225,7 @@ Partial Public Class FirstDatabaseDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As FirstDatabaseDataSet = New FirstDatabaseDataSet()
+        Dim ds As DataBaseDataSet = New DataBaseDataSet()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -283,13 +283,13 @@ Partial Public Class FirstDatabaseDataSet
     Partial Public Class ConnaissancesDataTable
         Inherits Global.System.Data.TypedTableBase(Of ConnaissancesRow)
         
-        Private columnTitre_Connaissances As Global.System.Data.DataColumn
+        Private columnKm_Id As Global.System.Data.DataColumn
         
-        Private columnContenu_Connaissances As Global.System.Data.DataColumn
+        Private columnTitre As Global.System.Data.DataColumn
         
-        Private columnDate_Connaissances As Global.System.Data.DataColumn
+        Private columnContenu As Global.System.Data.DataColumn
         
-        Private columnKm_ID As Global.System.Data.DataColumn
+        Private columnDate As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -328,33 +328,33 @@ Partial Public Class FirstDatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Titre_ConnaissancesColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Km_IdColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnTitre_Connaissances
+                Return Me.columnKm_Id
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Contenu_ConnaissancesColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property TitreColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnContenu_Connaissances
+                Return Me.columnTitre
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Date_ConnaissancesColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property ContenuColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnDate_Connaissances
+                Return Me.columnContenu
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Km_IDColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property DateColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnKm_ID
+                Return Me.columnDate
             End Get
         End Property
         
@@ -395,9 +395,9 @@ Partial Public Class FirstDatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddConnaissancesRow(ByVal Titre_Connaissances As String, ByVal Contenu_Connaissances As String, ByVal Date_Connaissances As String) As ConnaissancesRow
+        Public Overloads Function AddConnaissancesRow(ByVal Titre As String, ByVal Contenu As String, ByVal _Date As Date) As ConnaissancesRow
             Dim rowConnaissancesRow As ConnaissancesRow = CType(Me.NewRow,ConnaissancesRow)
-            Dim columnValuesArray() As Object = New Object() {Titre_Connaissances, Contenu_Connaissances, Date_Connaissances, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Titre, Contenu, _Date}
             rowConnaissancesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowConnaissancesRow)
             Return rowConnaissancesRow
@@ -405,8 +405,8 @@ Partial Public Class FirstDatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByTitre_Connaissances(ByVal Titre_Connaissances As String) As ConnaissancesRow
-            Return CType(Me.Rows.Find(New Object() {Titre_Connaissances}),ConnaissancesRow)
+        Public Function FindByKm_Id(ByVal Km_Id As Integer) As ConnaissancesRow
+            Return CType(Me.Rows.Find(New Object() {Km_Id}),ConnaissancesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -426,36 +426,35 @@ Partial Public Class FirstDatabaseDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnTitre_Connaissances = MyBase.Columns("Titre Connaissances")
-            Me.columnContenu_Connaissances = MyBase.Columns("Contenu Connaissances")
-            Me.columnDate_Connaissances = MyBase.Columns("Date Connaissances")
-            Me.columnKm_ID = MyBase.Columns("Km ID")
+            Me.columnKm_Id = MyBase.Columns("Km Id")
+            Me.columnTitre = MyBase.Columns("Titre")
+            Me.columnContenu = MyBase.Columns("Contenu")
+            Me.columnDate = MyBase.Columns("Date")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnTitre_Connaissances = New Global.System.Data.DataColumn("Titre Connaissances", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTitre_Connaissances)
-            Me.columnContenu_Connaissances = New Global.System.Data.DataColumn("Contenu Connaissances", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnContenu_Connaissances)
-            Me.columnDate_Connaissances = New Global.System.Data.DataColumn("Date Connaissances", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnDate_Connaissances)
-            Me.columnKm_ID = New Global.System.Data.DataColumn("Km ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnKm_ID)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnTitre_Connaissances}, true))
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint2", New Global.System.Data.DataColumn() {Me.columnKm_ID}, false))
-            Me.columnTitre_Connaissances.AllowDBNull = false
-            Me.columnTitre_Connaissances.Unique = true
-            Me.columnTitre_Connaissances.MaxLength = 50
-            Me.columnContenu_Connaissances.MaxLength = 50
-            Me.columnDate_Connaissances.MaxLength = 50
-            Me.columnKm_ID.AutoIncrement = true
-            Me.columnKm_ID.AutoIncrementSeed = -1
-            Me.columnKm_ID.AutoIncrementStep = -1
-            Me.columnKm_ID.AllowDBNull = false
-            Me.columnKm_ID.ReadOnly = true
-            Me.columnKm_ID.Unique = true
+            Me.columnKm_Id = New Global.System.Data.DataColumn("Km Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKm_Id)
+            Me.columnTitre = New Global.System.Data.DataColumn("Titre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTitre)
+            Me.columnContenu = New Global.System.Data.DataColumn("Contenu", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnContenu)
+            Me.columnDate = New Global.System.Data.DataColumn("Date", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnDate.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "DateColumn")
+            Me.columnDate.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnDate")
+            Me.columnDate.ExtendedProperties.Add("Generator_UserColumnName", "Date")
+            MyBase.Columns.Add(Me.columnDate)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnKm_Id}, true))
+            Me.columnKm_Id.AutoIncrement = true
+            Me.columnKm_Id.AutoIncrementSeed = -1
+            Me.columnKm_Id.AutoIncrementStep = -1
+            Me.columnKm_Id.AllowDBNull = false
+            Me.columnKm_Id.ReadOnly = true
+            Me.columnKm_Id.Unique = true
+            Me.columnTitre.MaxLength = 536870911
+            Me.columnContenu.MaxLength = 536870911
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -523,7 +522,7 @@ Partial Public Class FirstDatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As FirstDatabaseDataSet = New FirstDatabaseDataSet()
+            Dim ds As DataBaseDataSet = New DataBaseDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -602,80 +601,94 @@ Partial Public Class FirstDatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Titre_Connaissances() As String
+        Public Property Km_Id() As Integer
             Get
-                Return CType(Me(Me.tableConnaissances.Titre_ConnaissancesColumn),String)
+                Return CType(Me(Me.tableConnaissances.Km_IdColumn),Integer)
             End Get
             Set
-                Me(Me.tableConnaissances.Titre_ConnaissancesColumn) = value
+                Me(Me.tableConnaissances.Km_IdColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Contenu_Connaissances() As String
+        Public Property Titre() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableConnaissances.Contenu_ConnaissancesColumn),String)
+                    Return CType(Me(Me.tableConnaissances.TitreColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("La valeur pour la colonne 'Contenu Connaissances' dans la table 'Connaissances' e"& _ 
-                            "st DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("La valeur pour la colonne 'Titre' dans la table 'Connaissances' est DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableConnaissances.Contenu_ConnaissancesColumn) = value
+                Me(Me.tableConnaissances.TitreColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Date_Connaissances() As String
+        Public Property Contenu() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableConnaissances.Date_ConnaissancesColumn),String)
+                    Return CType(Me(Me.tableConnaissances.ContenuColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("La valeur pour la colonne 'Date Connaissances' dans la table 'Connaissances' est "& _ 
-                            "DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("La valeur pour la colonne 'Contenu' dans la table 'Connaissances' est DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableConnaissances.Date_ConnaissancesColumn) = value
+                Me(Me.tableConnaissances.ContenuColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Km_ID() As Integer
+        Public Property _Date() As Date
             Get
-                Return CType(Me(Me.tableConnaissances.Km_IDColumn),Integer)
+                Try 
+                    Return CType(Me(Me.tableConnaissances.DateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("La valeur pour la colonne 'Date' dans la table 'Connaissances' est DBNull.", e)
+                End Try
             End Get
             Set
-                Me(Me.tableConnaissances.Km_IDColumn) = value
+                Me(Me.tableConnaissances.DateColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsContenu_ConnaissancesNull() As Boolean
-            Return Me.IsNull(Me.tableConnaissances.Contenu_ConnaissancesColumn)
+        Public Function IsTitreNull() As Boolean
+            Return Me.IsNull(Me.tableConnaissances.TitreColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetContenu_ConnaissancesNull()
-            Me(Me.tableConnaissances.Contenu_ConnaissancesColumn) = Global.System.Convert.DBNull
+        Public Sub SetTitreNull()
+            Me(Me.tableConnaissances.TitreColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsDate_ConnaissancesNull() As Boolean
-            Return Me.IsNull(Me.tableConnaissances.Date_ConnaissancesColumn)
+        Public Function IsContenuNull() As Boolean
+            Return Me.IsNull(Me.tableConnaissances.ContenuColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetDate_ConnaissancesNull()
-            Me(Me.tableConnaissances.Date_ConnaissancesColumn) = Global.System.Convert.DBNull
+        Public Sub SetContenuNull()
+            Me(Me.tableConnaissances.ContenuColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Is_DateNull() As Boolean
+            Return Me.IsNull(Me.tableConnaissances.DateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Set_DateNull()
+            Me(Me.tableConnaissances.DateColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -716,7 +729,7 @@ Partial Public Class FirstDatabaseDataSet
     End Class
 End Class
 
-Namespace FirstDatabaseDataSetTableAdapters
+Namespace DataBaseDataSetTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -845,40 +858,39 @@ Namespace FirstDatabaseDataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Connaissances"
-            tableMapping.ColumnMappings.Add("Titre Connaissances", "Titre Connaissances")
-            tableMapping.ColumnMappings.Add("Contenu Connaissances", "Contenu Connaissances")
-            tableMapping.ColumnMappings.Add("Date Connaissances", "Date Connaissances")
-            tableMapping.ColumnMappings.Add("Km ID", "Km ID")
+            tableMapping.ColumnMappings.Add("Km Id", "Km Id")
+            tableMapping.ColumnMappings.Add("Titre", "Titre")
+            tableMapping.ColumnMappings.Add("Contenu", "Contenu")
+            tableMapping.ColumnMappings.Add("Date", "Date")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [Connaissances] WHERE (([Km ID] = @p1))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [Connaissances] WHERE (([Km Id] = @p1))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Km ID", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Km Id", Global.System.Data.DataRowVersion.Original, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [Connaissances] ([Titre Connaissances], [Contenu Connaissances], [Dat"& _ 
-                "e Connaissances]) VALUES (@p1, @p2, @p3)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [Connaissances] ([Titre], [Contenu], [Date]) VALUES (@p1, @p2, @p3)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Titre Connaissances", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Contenu Connaissances", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Date Connaissances", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NText, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Titre", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NText, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Contenu", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Date", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [Connaissances] SET [Titre Connaissances] = @p1, [Contenu Connaissances] ="& _ 
-                " @p2, [Date Connaissances] = @p3 WHERE (([Km ID] = @p4))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [Connaissances] SET [Titre] = @p1, [Contenu] = @p2, [Date] = @p3 WHERE ((["& _ 
+                "Km Id] = @p4))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Titre Connaissances", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Contenu Connaissances", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Date Connaissances", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Km ID", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NText, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Titre", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NText, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Contenu", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Date", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "Km Id", Global.System.Data.DataRowVersion.Original, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlServerCe.SqlCeConnection()
-            Me._connection.ConnectionString = Global.SauvegardeConnaissance.My.MySettings.Default.FirstDatabaseConnectionString
+            Me._connection.ConnectionString = Global.SauvegardeConnaissance.My.MySettings.Default.DataBaseConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -887,8 +899,7 @@ Namespace FirstDatabaseDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [Titre Connaissances], [Contenu Connaissances], [Date Connaissances], [Km "& _ 
-                "ID] FROM Connaissances"
+            Me._commandCollection(0).CommandText = "SELECT [Km Id], [Titre], [Contenu], [Date] FROM [Connaissances]"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -896,7 +907,7 @@ Namespace FirstDatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As FirstDatabaseDataSet.ConnaissancesDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As DataBaseDataSet.ConnaissancesDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -909,9 +920,9 @@ Namespace FirstDatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As FirstDatabaseDataSet.ConnaissancesDataTable
+        Public Overloads Overridable Function GetData() As DataBaseDataSet.ConnaissancesDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As FirstDatabaseDataSet.ConnaissancesDataTable = New FirstDatabaseDataSet.ConnaissancesDataTable()
+            Dim dataTable As DataBaseDataSet.ConnaissancesDataTable = New DataBaseDataSet.ConnaissancesDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -919,14 +930,14 @@ Namespace FirstDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As FirstDatabaseDataSet.ConnaissancesDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As DataBaseDataSet.ConnaissancesDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As FirstDatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As DataBaseDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Connaissances")
         End Function
         
@@ -1129,7 +1140,7 @@ Namespace FirstDatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As FirstDatabaseDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As DataBaseDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._connaissancesTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.Connaissances.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
@@ -1148,7 +1159,7 @@ Namespace FirstDatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As FirstDatabaseDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As DataBaseDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._connaissancesTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.Connaissances.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
@@ -1166,7 +1177,7 @@ Namespace FirstDatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As FirstDatabaseDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As DataBaseDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._connaissancesTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.Connaissances.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
@@ -1210,7 +1221,7 @@ Namespace FirstDatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As FirstDatabaseDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As DataBaseDataSet) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If
